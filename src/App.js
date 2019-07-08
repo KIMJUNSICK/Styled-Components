@@ -24,15 +24,23 @@ const Card = styled.div`
 `;
 
 const Form = () => (
-  <Card>
-    <Button>JUNSIK</Button>
-  </Card>
+  <Fragment>
+    <Card>
+      <Button>JUNSIK</Button>
+    </Card>
+    <Card>
+      <Button>JUNSIK</Button>
+    </Card>
+  </Fragment>
 );
 
 const Container = styled.div`
   background-color: #e7e9bb;
   height: 100vh;
   width: 100%;
+  ${Card}:last-child {
+    background-color: ${props => props.theme.successColor};
+  }
 `;
 
 export default App;
